@@ -125,6 +125,11 @@ body {
     align-items: center;
 }
 
+.intro-left h2  span > img{
+    width: 80px;
+    height: 80px;
+}
+
 .intro-right {
     width: 100%;
     max-width: 380px;
