@@ -13,6 +13,7 @@ body {
     font-size: 1em;
     background: #212121;
 }
+
 /* header */
 
 .header {
@@ -102,7 +103,7 @@ body {
     max-width: 100%;
 }
 
-.intro-left h1 {
+.title {
     text-transform: uppercase;
     font-size: 1.125em;
     line-height: 1.2;
@@ -110,7 +111,7 @@ body {
     color: #858585;
 }
 
-.intro-left h2 {
+.subtitle {
     margin-top: 32px;
     text-transform: uppercase;
     font-size: 3em;
@@ -184,7 +185,7 @@ body {
 
 .action-left .arrow-action figure:hover,
 .action-right .arrow-action figure:hover {
-    animation: sendAction .3s forwards;
+    animation: toRight .4s forwards;
 }
 
 .action-left {
@@ -200,14 +201,114 @@ body {
     cursor: pointer;
 }
 
-@keyframes sendAction {
+@keyframes toRight {
     from {
-        opacity: 0;
-        transform: translate3d(-30px, 0, 0)
+        transform: translateX(-30px)
     }
 
     to {
-        opacity: 1;
-        transform: translate3d(0, 0, 0);
+        transform: translateX(0);
     }
+}
+
+/* accessibility */
+
+.accessibility {
+    margin: 128px auto 0 auto;
+    width: 100%;
+    max-width: 1260px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.accessibility-left h2 {
+    position: relative
+}
+
+.accessibility-left figure img {
+    height: 532px;
+}
+
+
+.accessibility-left h2 > img {
+    position: absolute;
+    bottom: 30px;
+    right: -6px;
+    width: 26px;
+    height: 26px;
+}
+
+.accessibility-center {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.accessibility-center p {
+    text-align: end;
+    max-width: 240px;
+    color: #F2F2F2;
+}
+
+.link{
+    color: #FECC53;
+    font-size: 1.5em;
+    text-decoration: underline;
+    text-transform: uppercase;
+}
+
+
+.accessibility-center a {
+    margin-top: 128px;
+}
+
+.slider {
+    display: flex;
+    align-items: flex-end;
+    margin-top: 37px;
+}
+
+.slide1,
+.slide2 {
+    margin: 0 5px 0;
+    width: 36px;
+    height: 36px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    align-self: flex-end;
+    cursor: pointer;
+}
+
+.slide1 {
+    background: #F2F2F2;
+}
+
+/* accessibility-hidden */
+
+.accessibility-hidden {
+    justify-content: flex-start;
+}
+
+.accessibility-hidden figure > img {
+    max-width: 100%;
+    height: 532px;
+
+}
+
+.accessibility-hidden-content {
+    margin-left: 64px;
+}
+
+.accessibility-hidden-content p  {
+    margin-top: 32px;
+    max-width: 240px;
+    color: #F2F2F2;
+}
+.accessibility-hidden-content a {
+    display: block;
+    margin-top: 64px;
 }
