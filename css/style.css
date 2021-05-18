@@ -222,7 +222,7 @@ body {
     margin: 128px auto 0 auto;
     width: 100%;
     max-width: 1260px;
-    display: flex;
+    display: none;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-between;
@@ -276,6 +276,7 @@ body {
 
 .accessibility-hidden {
     justify-content: flex-start;
+    display: none;
 }
 
 .accessibility-hidden figure > img {
@@ -317,6 +318,27 @@ body {
     cursor: pointer;
 }
 
-.slide1 {
-    background: #F2F2F2;
+/* javascript */
+
+.js-slide.active {
+    padding: 0 20px;
+    display: flex;
+    animation: content-show .8s forwards;
+    position: absolute;
+    background-color: #212121;
+}
+
+.js-buttons.active {
+    background-color: #F2F2F2;
+}
+
+@keyframes content-show {
+    from {
+        opacity: 0;
+        transform: translate3d(2000px, 0, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
 }
