@@ -29,9 +29,18 @@ function animateSearch() {
 
     const showInput = () => {
         inputSearch.value = '';
+        inputSearch.classList.remove('hide');
         inputSearch.classList.toggle('active');
+        inputSearch.focus();
     }
+
+    const hideInput = () => {
+        inputSearch.classList.remove('active');
+        inputSearch.classList.add('hide');
+    }
+
     search.addEventListener('click', showInput);
+    inputSearch.addEventListener('blur', hideInput);
 };
 
 function start() {

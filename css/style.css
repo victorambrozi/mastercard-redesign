@@ -232,7 +232,7 @@ body {
     position: relative
 }
 
-.accessibility-left figure img {
+.accessibility-left figure > img {
     height: 532px;
 }
 
@@ -398,7 +398,7 @@ body {
 }
 
 .benefits-content-right p {
-    max-width: 380px;
+    max-width: 371px;
     color: #858585;
 }
 
@@ -438,9 +438,14 @@ body {
 }
 
 #search.active {
-    display: block;
-    animation: show-input .3s forwards;
+    display: inline-block;
+    animation: show-input .5s forwards;
 }
+
+#search.hide {
+    display: none;
+    animation: hide-input .5s forwards;
+} 
 
 @keyframes show-input {
     from {
@@ -448,5 +453,14 @@ body {
     }
     to {
         transform: translate3d(0,0,0);
+    }
+}
+
+@keyframes hide-input {
+    from {
+        transform: translate3d(0, 0, 0);
+    }
+    to {
+        transform: translate3d(200px, 0, 0);
     }
 }
