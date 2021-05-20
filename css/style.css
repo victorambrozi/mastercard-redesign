@@ -318,13 +318,107 @@ body {
     cursor: pointer;
 }
 
+/* benefits */
+.benefits {
+    margin: 64px auto 0 auto;
+    padding-bottom: 64px;
+    width: 100%;
+    max-width: 1260px;
+    border-bottom: 1px solid #85858547;
+
+}
+
+.benefits-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.circle-wrapper {
+    margin-right: 32px;
+    width: 300px;
+    height: 300px;
+    border: 3px solid #F2F2F2;
+    border-radius: 100%;
+    position: relative;
+}
+
+.circle-wrapper .white-circle {
+    width: 300px;
+    height: 300px;
+    background-color: #F2F2F2;
+    border-radius: 100%;
+    position: absolute;
+    
+    animation: animate-white 3s infinite linear;
+}
+
+.circle-wrapper .black-circle {
+    width: 300px;
+    height: 300px;
+    background-color: #212121;
+    border-radius: 100%;
+    position: absolute;
+
+    animation: animate-black 3s infinite linear; 
+}
+
+@keyframes animate-black {
+    0% {
+        transform: scale(0);
+    }
+
+    25% {
+        transform: scale(0.97);
+    }
+
+    100% {
+        transform: scale(0.97);
+    }
+}
+
+@keyframes animate-white {
+    0% {
+      transform: scale(0);
+      z-index: -1;
+    }
+    25% {
+      transform: scale(0);
+      z-index: 999;
+    }
+
+    100% {
+      transform: scale(1);
+      z-index: 999;
+    }
+  }
+
+.benefits-content-right{
+    align-self: flex-end;
+}
+
+.benefits-content-right p {
+    max-width: 380px;
+    color: #858585;
+}
+
+.benefits-content-right a {
+    display: block;
+    margin-top: 32px;
+
+}
+
+.teste {
+    margin-top: 64px;
+}
+
+
 /* javascript */
 
 .js-slide.active {
     padding: 0 20px;
     display: flex;
     animation: content-show .8s forwards;
-    position: absolute;
     background-color: #212121;
 }
 
