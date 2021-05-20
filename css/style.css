@@ -82,7 +82,7 @@ body {
     border: none;
     background: transparent;
     outline: none;
-    display: none; /* mostrar input com js */
+    display: none ; /* mostrar input com js */
 }
 
 /* intro */
@@ -434,5 +434,19 @@ body {
     to {
         opacity: 1;
         transform: translate3d(0, 0, 0);
+    }
+}
+
+#search.active {
+    display: block;
+    animation: show-input .3s forwards;
+}
+
+@keyframes show-input {
+    from {
+        transform: translate3d(200px, 0, 0);
+    }
+    to {
+        transform: translate3d(0,0,0);
     }
 }
