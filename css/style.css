@@ -14,6 +14,10 @@ body {
     background: #212121;
 }
 
+ul {
+    list-style: none;
+}
+
 .main {
     padding: 0 20px;
 }
@@ -408,59 +412,90 @@ body {
 
 }
 
-.teste {
+/* footer */
+
+.footer {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1260px;
     margin-top: 64px;
 }
 
-
-/* javascript */
-
-.js-slide.active {
-    padding: 0 20px;
+.footer-content {
     display: flex;
-    animation: content-show .8s forwards;
-    background-color: #212121;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
 }
 
-.js-buttons.active {
-    background-color: #F2F2F2;
+.footer-left h2{
+    max-width: 540px;
+    font-size: 2.5em;
+    font-weight: 500;
+    color: #F2F2F2;
 }
 
-@keyframes content-show {
-    from {
-        opacity: 0;
-        transform: translate3d(2000px, 0, 0);
-    }
-    to {
-        opacity: 1;
-        transform: translate3d(0, 0, 0);
-    }
+.footer-links {
+    margin-top: 64px;
+    font-size: 0.875em;
+    font-weight: 400;
+    line-height: 1.25;
 }
 
-#search.active {
-    display: inline-block;
-    animation: show-input .5s forwards;
+.footer-links > li:nth-child(n + 2) {
+    margin-top: 30px;
 }
 
-#search.hide {
-    display: none;
-    animation: hide-input .5s forwards;
-} 
-
-@keyframes show-input {
-    from {
-        transform: translate3d(200px, 0, 0);
-    }
-    to {
-        transform: translate3d(0,0,0);
-    }
+.footer-links > li a {
+    text-decoration: none;
+    color: #c5c5c5;
 }
 
-@keyframes hide-input {
-    from {
-        transform: translate3d(0, 0, 0);
-    }
-    to {
-        transform: translate3d(200px, 0, 0);
-    }
+.footer-links > li a:hover {
+    color: #F2F2F2;
+}
+
+.footer-title {
+    text-transform: uppercase;
+    font-size: 1.125em;
+    font-weight: 600;
+    color: #858585;
+}
+
+.footer-accessibility {
+    margin: 64px auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0.875em;
+    font-weight: 500;
+    color: #F2F2F2;
+}
+
+
+.footer-accessibility ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer-accessibility ul > li:nth-child(n + 2) {
+    margin-left: 64px;
+}
+
+.footer-accessibility ul li > a {
+    text-decoration: none;
+    color: #F2F2F2;
+}
+
+.footer-accessibility figure {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-accessibility figure img {
+    margin-right: 10px;
 }
