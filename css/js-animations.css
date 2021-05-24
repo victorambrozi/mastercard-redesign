@@ -1,0 +1,49 @@
+.js-slide.active {
+    padding: 0 20px;
+    display: flex;
+    animation: content-show .8s forwards;
+    background-color: #212121;
+}
+
+.js-buttons.active {
+    background-color: #F2F2F2;
+}
+
+@keyframes content-show {
+    from {
+        opacity: 0;
+        transform: translate3d(2000px, 0, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+#search.active {
+    display: inline-block;
+    animation: show-input .5s forwards;
+}
+
+#search.hide {
+    display: none;
+    animation: hide-input .5s forwards;
+} 
+
+@keyframes show-input {
+    from {
+        transform: translate3d(200px, 0, 0);
+    }
+    to {
+        transform: translate3d(0,0,0);
+    }
+}
+
+@keyframes hide-input {
+    from {
+        transform: translate3d(0, 0, 0);
+    }
+    to {
+        transform: translate3d(200px, 0, 0);
+    }
+}
