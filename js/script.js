@@ -43,7 +43,29 @@ function animateSearch() {
     inputSearch.addEventListener('blur', hideInput);
 };
 
+function animateArrow() {
+    const fieldArrows = [...document.querySelectorAll('.js-animation-arrow')];
+    const arrows = [...document.querySelectorAll('.js-arrow')];
+
+    const activeArrow = () => {
+        arrows.forEach( (arrow) => {
+            if (arrow.getAttribute('active')) {
+              arrow.classList.remove('active');  
+            } else {
+                arrow.classList.add('active');
+            }
+        })
+    }
+
+    fieldArrows.forEach((field) => {
+        field.addEventListener('mouseover', activeArrow)
+    })
+}
+
+
+
 function start() {
     initSlide();
     animateSearch();
+    animateArrow();
 };
