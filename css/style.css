@@ -192,10 +192,10 @@ ul {
     border-radius: 100%;
 }
 
-.action-left .arrow-action figure:hover,
-.action-right .arrow-action figure:hover {
+/* .action-left .arrow-action:hover,
+.action-right .arrow-action:hover {
     animation: toRight .4s forwards;
-}
+} */
 
 .action-left {
     flex: 2;
@@ -208,16 +208,6 @@ ul {
 
 .arrow-action {
     cursor: pointer;
-}
-
-@keyframes toRight {
-    from {
-        transform: translateX(-30px)
-    }
-
-    to {
-        transform: translateX(0);
-    }
 }
 
 /* accessibility */

@@ -47,22 +47,15 @@ function animateArrow() {
     const fieldArrows = [...document.querySelectorAll('.js-animation-arrow')];
     const arrows = [...document.querySelectorAll('.js-arrow')];
 
-    const activeArrow = () => {
-        arrows.forEach( (arrow) => {
-            if (arrow.getAttribute('active')) {
-              arrow.classList.remove('active');  
-            } else {
-                arrow.classList.add('active');
-            }
-        })
+    const activeArrow = (index) => {
+        arrows.forEach((arrow) => arrow.classList.remove('active'));
+        arrows[index].classList.add('active');
     }
 
-    fieldArrows.forEach((field) => {
-        field.addEventListener('mouseover', activeArrow)
+    fieldArrows.forEach((field, index) => {
+        field.addEventListener('mouseover', () => activeArrow(index))
     })
 }
-
-
 
 function start() {
     initSlide();
