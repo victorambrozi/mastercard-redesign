@@ -86,7 +86,7 @@ ul {
     border: none;
     background: transparent;
     outline: none;
-    display: none ; /* mostrar input com js */
+    display: none;
 }
 
 /* intro */
@@ -288,7 +288,7 @@ ul {
 }
 .accessibility-hidden-content a {
     display: block;
-    margin-top: 64px;
+    margin-top: 64px
 }
 
 .slider {
