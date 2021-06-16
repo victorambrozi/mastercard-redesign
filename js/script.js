@@ -3,6 +3,7 @@ window.addEventListener('load', start);
 const slideButtons = [...document.querySelectorAll('.js-buttons')];
 const slideContent = [...document.querySelectorAll('.js-slide')];
 
+
 function initSlide() {
     slideContent[0].classList.add('active');
     slideButtons[0].classList.add('active');
@@ -21,7 +22,7 @@ function initSlide() {
     };
 };
 
-function animateSearch() {
+const animateSearch = () => {
     const inputSearch = document.getElementById('search');
     const search = document.querySelector('.js-search');
 
@@ -40,7 +41,7 @@ function animateSearch() {
     inputSearch.addEventListener('blur', hideInput);
 };
 
-function animateArrow() {
+const animateArrow = () => {
     const fieldArrows = [...document.querySelectorAll('.js-animation-arrow')];
     const arrows = [...document.querySelectorAll('.js-arrow')];
 
@@ -55,8 +56,33 @@ function animateArrow() {
     };
 };
 
+const animateScroll = () => {
+    const sections = [...document.querySelectorAll('.js-scroll')];
+
+    function getHeight() {
+        sections.forEach((section) => {
+            const height = section.getBoundingClientRect().top;
+            const halfScreen = window.innerHeight * 0.4;
+            const isHalf = height < halfScreen;
+
+            if (isHalf) {
+                // slideContent[0].classList.add('active');
+                // slideButtons[0].classList.add('active');
+                section.classList.add('active-scroll')
+            } else {
+                section.classList.remove('active-scroll')
+            }
+
+
+        })
+    }
+    getHeight();
+    window.addEventListener('scroll', getHeight);
+}
+
 function start() {
     initSlide();
     animateSearch();
     animateArrow();
+    animateScroll();
 };
