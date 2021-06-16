@@ -1,0 +1,31 @@
+@media(max-width: 900px) {
+    .intro {
+        display: block;
+    }
+
+    .intro-right p {
+        transition: none;
+        margin-top: 32px;
+    }
+    .action-left,
+    .action-right {
+        flex-wrap: nowrap;
+        flex: 1;
+    }
+
+    .action-right {
+    margin-left: 64px;
+        margin-left: 16px;
+    }
+
+    .accessibility-center p {
+        flex-direction: column;
+        align-self: center;
+    }
+    .accessibility-center a {
+        margin-top: 64px;
+    }
+    .footer {
+        padding: 0 20px;
+    }
+}
