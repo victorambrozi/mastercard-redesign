@@ -175,7 +175,6 @@ ul {
     font-weight: 500;
     color: #F2F2F2;
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     border: 1px solid #858585;
@@ -191,11 +190,6 @@ ul {
     border: 1px solid #F2F2F2;
     border-radius: 100%;
 }
-
-/* .action-left .arrow-action:hover,
-.action-right .arrow-action:hover {
-    animation: toRight .4s forwards;
-} */
 
 .action-left {
     flex: 2;
@@ -409,6 +403,7 @@ ul {
 
 .footer {
     margin: 0 auto;
+    padding: 0 20px;
     width: 100%;
     max-width: 1260px;
     margin-top: 64px;
