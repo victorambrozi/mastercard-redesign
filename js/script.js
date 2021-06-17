@@ -5,9 +5,6 @@ const slideContent = [...document.querySelectorAll('.js-slide')];
 
 
 function initSlide() {
-    slideContent[0].classList.add('active');
-    slideButtons[0].classList.add('active');
-
     if (slideButtons.length && slideContent.length) {
         const showContent = (index) => {
             slideContent.forEach((content) => content.classList.remove('active'));
@@ -56,33 +53,8 @@ const animateArrow = () => {
     };
 };
 
-const animateScroll = () => {
-    const sections = [...document.querySelectorAll('.js-scroll')];
-
-    function getHeight() {
-        sections.forEach((section) => {
-            const height = section.getBoundingClientRect().top;
-            const halfScreen = window.innerHeight * 0.4;
-            const isHalf = height < halfScreen;
-
-            if (isHalf) {
-                // slideContent[0].classList.add('active');
-                // slideButtons[0].classList.add('active');
-                section.classList.add('active-scroll')
-            } else {
-                section.classList.remove('active-scroll')
-            }
-
-
-        })
-    }
-    getHeight();
-    window.addEventListener('scroll', getHeight);
-}
-
 function start() {
     initSlide();
     animateSearch();
     animateArrow();
-    animateScroll();
 };
