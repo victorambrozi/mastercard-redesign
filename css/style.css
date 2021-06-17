@@ -107,7 +107,7 @@ ul {
     margin-top: 32px;
 }
 
-.intro figure img {
+.intro figure > img[alt="Home"] {
     width: 100%;
     max-width: 100%;
 }
@@ -216,14 +216,13 @@ ul {
     justify-content: space-between;
 }
 
+.accessibility figure > img {
+    max-width: 100%;
+}
+
 .accessibility-left h2 {
     position: relative
 }
-
-.accessibility-left figure > img {
-    height: 532px;
-}
-
 
 .accessibility-left h2 > img {
     position: absolute;
@@ -245,6 +244,10 @@ ul {
     text-align: end;
     max-width: 240px;
     color: #F2F2F2;
+}
+
+.accessibility-center p + p {
+    margin-top: 32px;
 }
 
 .link{
